@@ -1,14 +1,148 @@
+<!doctype html>
+<html lang="ru">
 <head>
-  <title>Иван Карпухин - Мой Гитхаб</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Иван Карпухин — мой гитхаб</title>
+<meta name="description" content="Проекты Ивана Карпухина: «Зарянка» — визуальная новелла, 2mon, ЧАВО по ЖК Малина. Контакты.">
+<link rel="icon" href="https://piroman99.github.io/zarynka/vn2/img/logo.png">
+<style>
+  :root{
+    --ink:#1c1c1a; --muted:#6b6b66; --line:#e3e1da; --bg:#fbfaf7; --card:#ffffff;
+    --accent:#8c2f1f; --dark:#0d1014;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    padding:48px 20px 72px;
+  }
+  main{max-width:760px; margin:0 auto}
+  a{color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(140,47,31,.28)}
+  a:hover{border-bottom-color:var(--accent)}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif; font-weight:600; line-height:1.25; margin:0}
+  h1{font-size:clamp(28px,5vw,40px); letter-spacing:-.4px}
+  h2{font-size:clamp(20px,3vw,25px); margin:52px 0 18px; padding-bottom:10px; border-bottom:1px solid var(--line)}
+  h3{font-size:21px}
+  p{margin:0 0 14px}
+  .lead{margin-top:18px}
+  .muted{color:var(--muted)}
+  .small{font-size:14.5px; color:var(--muted)}
+
+  /* ——— карточка проекта ——— */
+  .feature{
+    display:grid; grid-template-columns:minmax(0,240px) minmax(0,1fr); gap:0;
+    background:var(--dark); color:#ecebe6; border-radius:14px; overflow:hidden;
+    box-shadow:0 10px 30px rgba(13,16,20,.18); margin:0 0 26px;
+  }
+  .feature .shot{position:relative; min-height:100%}
+  .feature .shot img{display:block; width:100%; height:100%; object-fit:cover}
+  .feature .body{padding:22px 24px 24px}
+  .feature h3{color:#fff}
+  .feature h3 span{
+    display:block; font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:#c8a06a;
+    font-weight:600; margin-top:8px;
+  }
+  .feature p{color:#c3c2bc; font-size:15px; margin:14px 0 0}
+  .btns{display:flex; flex-wrap:wrap; gap:10px; margin-top:20px}
+  .btn{
+    display:inline-block; padding:10px 18px; border-radius:9px; font-size:15px; font-weight:600;
+    border:1px solid rgba(255,255,255,.28); color:#ecebe6; transition:background .15s,border-color .15s;
+  }
+  .btn:hover{background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.55)}
+  .btn.primary{background:#e0b478; border-color:#e0b478; color:#20170c}
+  .btn.primary:hover{background:#efc68e; border-color:#efc68e}
+
+  /* ——— списки проектов ——— */
+  .list{list-style:none; margin:0; padding:0}
+  .list li{
+    background:var(--card); border:1px solid var(--line); border-radius:11px;
+    padding:14px 18px; margin-bottom:10px;
+  }
+  .list li b{font-weight:600}
+  .list li .small{display:block; margin-top:3px}
+
+  /* ——— контакты ——— */
+  .contacts{list-style:none; margin:0; padding:0}
+  .contacts li{padding:11px 0; border-bottom:1px solid var(--line)}
+  .contacts li:last-child{border-bottom:0}
+  .contacts .k{display:inline-block; min-width:150px; color:var(--muted); font-size:14.5px}
+  .fact{margin-top:26px; padding:16px 18px; background:#f3f1ea; border-radius:11px; font-size:15px}
+  footer{margin-top:44px; font-size:13.5px; color:#96958e}
+
+  @media (max-width:640px){
+    body{padding:32px 16px 56px}
+    .feature{grid-template-columns:1fr}
+    .feature .shot{aspect-ratio:16/9; min-height:0}
+    .contacts .k{display:block; min-width:0}
+  }
+</style>
 </head>
 <body>
-Мои проекты. <br>
-  <p><b>Живые</b><br>
-  <a href='https://piroman99.github.io/jkmalina/'> ЧАВО ПО ЖК Малина</a><br>
-    </p>
-  <p><b>Не очень живые</b><br>
-  <a href='https://github.com/piroman99/wp-install'> Вебокружение Wordpress - никому оказался не нужен</a><br>
-  <a href='https://github.com/piroman99/CNP01'> Смарт часы в опен сурсе - Разработчик потерял интерес</a><br>
-  </p>
-  <p> Я самозанятый и самодостаточный менеджер ИТ проектов, теперь в Нахабино (Московская область). У меня было много разных проектов, но в данный момент - мало.<br> Если что надо, обращайтесь piroman99@yandex.ru  <a href="tel:+79037648248"> +79037648248</a>  или к  <a href="https://t.me/Piroman99">Piroman99 в телеграмм</a> 
-<body>
+<main>
+
+  <h1>Привет! 👋 Я Иван</h1>
+  <p class="lead">Всю жизнь колдую над серверами, сетями и железом. Иногда с бубном, иногда с ИИ.
+    Но результат всегда один — работает.</p>
+  <p>Спринты не планирую, команды не уговариваю. Просто делаю так, чтобы техника не подводила.</p>
+  <p class="muted">Двадцать лет руководил хостинговой компанией. Сейчас системный инженер
+    в <a href="https://cctld.ru">cctld.ru</a> — национальный реестр доменов:
+    инфраструктура, бэкапы, мониторинг.</p>
+
+  <h2>Проекты</h2>
+
+  <article class="feature">
+    <div class="shot">
+      <img src="https://piroman99.github.io/zarynka/vn2/img/prolog/s1.webp" alt="«Зарянка» — кадр пролога">
+    </div>
+    <div class="body">
+      <h3>Зарянка <span>визуальная новелла</span></h3>
+      <p>Экранизация рассказа Александра «Котобус» Горбова. Браузерная новелла без зависимостей:
+        «кинохроника 2061» и приёмная, где всё и решается. Пилот готов, черновик — права на текст
+        пока не оформлены.</p>
+      <p class="btns">
+        <a class="btn primary" href="https://piroman99.github.io/zarynka/">Открыть превью →</a>
+        <a class="btn" href="https://github.com/piroman99/zarynka">Проект на GitHub</a>
+      </p>
+    </div>
+  </article>
+
+  <ul class="list">
+    <li><b><a href="https://piroman99.github.io/jkmalina/">ЧАВО по ЖК Малина</a></b>
+      <span class="small">Живое — сайт для соседей, который до сих пор нужен.</span></li>
+    <li><b><a href="https://2mon.ru">2mon</a></b>
+      <span class="small">Живой сервис: уведомления из Zabbix в MAX. Go + MongoDB, код на GitFlic.</span></li>
+    <li><b><a href="https://github.com/piroman99/nanobot-linux-toolkit">nanobot-linux-toolkit</a></b>
+      <span class="small">Кнопка «включить/выключить» для nanobot-шлюза, песочница exec, systemd.</span></li>
+    <li><b><a href="https://github.com/piroman99/plusvibe">plusvibe</a></b>
+      <span class="small">Остаток и расход на PlusVibe: CLI на stdlib и виджет для GNOME.</span></li>
+    <li><b><a href="https://github.com/piroman99/wp-install">Вебокружение WordPress</a></b>
+      <span class="small">Не очень живое — никому оказался не нужен.</span></li>
+    <li><b><a href="https://github.com/piroman99/CNP01">Смарт-часы в опенсорсе</a></b>
+      <span class="small">Не очень живое — разработчик потерял интерес.</span></li>
+  </ul>
+
+  <h2>Контакты</h2>
+  <ul class="contacts">
+    <li><span class="k">Telegram / Макс / телефон</span>
+      <a href="tel:+79037648248">+7 903 764 82 48</a> ·
+      <a href="https://t.me/Piroman99">@Piroman99</a>
+      <div class="small">Всё привязано к этому номеру. Звонить бесполезно, только сообщения.</div></li>
+    <li><span class="k">Почта</span>
+      <a href="mailto:79037648248@ya.ru">79037648248@ya.ru</a> ·
+      <a href="mailto:piroman99@yandex.ru">piroman99@yandex.ru</a></li>
+    <li><span class="k">GitHub</span>
+      <a href="https://github.com/piroman99">github.com/piroman99</a></li>
+    <li><span class="k">GitFlic</span>
+      <a href="https://gitflic.ru/user/piroman99">gitflic.ru/user/piroman99</a></li>
+  </ul>
+
+  <p class="fact">📞 Интересный факт: этот телефонный номер со мной уже 30 лет.</p>
+
+  <footer>Нахабино, Московская область · <a href="https://github.com/piroman99/piroman99.github.io">исходник этой страницы</a></footer>
+
+</main>
+</body>
+</html>
